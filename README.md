@@ -35,3 +35,7 @@ Input validation is done to ensure the quality is between 1-100.
 
 - Sharp - for image processing 
 - readline - to get input from command line
+
+## License
+
+[Apache-2.0 license](LICENSE)
