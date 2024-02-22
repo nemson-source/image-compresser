@@ -1,4 +1,4 @@
-```markdown
+
 # Image Compressor 
 
 This is a simple Node.js script to compress images using the Sharp image processing library.
