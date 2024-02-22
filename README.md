@@ -1,41 +1,37 @@
 ```markdown
-# Image Compressor
+# Image Compressor 
 
-This is a simple Node.js script to compress images. It uses the [Sharp](https://github.com/lovell/sharp) library for image processing.
+This is a simple Node.js script to compress images using the Sharp image processing library.
 
 ## Usage
 
-1. Install dependencies
+The script prompts for the following inputs:
+
+- Input image path 
+- Output image path
+- Compression quality (1-100) 
+
+Example:
 
 ```
-npm install
+Enter the input file with file path, name and extension: images/image.jpg
+Enter the output file with file path, name and extension: compressed/image_compressed.jpg 
+Enter the compression quality (1-100): 80
 ```
 
-2. Run the script
+This will compress `images/image.jpg` to `compressed/image_compressed.jpg` at 80% quality.
 
-```
-node image-compressor.js
-```
-
-3. Follow the prompts to enter input image path, output image path, and compression quality percentage.
-
-4. Compressed image will be saved to the output path.
+Supported input formats are PNG, JPG/JPEG. The output will be in JPEG format.
 
 ## How it works
 
-- Uses Sharp library to read input image file.
-- Checks image format (JPEG, PNG) from metadata.
-- Compresses image as JPEG or PNG with specified quality.
-- Sharp handles optimized compression for each format.
-- Writes compressed image to output file path.
+The script uses the Sharp library to read the input image and compress it with the specified quality. 
 
-## Notes
+It gets the input image metadata to determine the format, and handles PNG and JPG images accordingly before writing the compressed image to the output path.
 
-- Supported input formats: JPEG, PNG
-- enter a number between 1-100 for compression quality. Higher = better quality but less compression.
-- Output format will match input format.
+Input validation is done to ensure the quality is between 1-100.
 
-## License
+## Dependencies
 
-This project is open source and available under the [MIT License](LICENSE).
-```
+- Sharp - for image processing 
+- readline - to get input from command line
